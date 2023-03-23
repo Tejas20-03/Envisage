@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import LandingPage from "./components/landing";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar"
 import Login from "./components/login_component";
@@ -11,12 +12,12 @@ function App() {
   return (
     <Router>
       <Navbar />
+      
       <Routes>
         <Route
           exact
           path="/"
-          element={isLoggedIn === true ? <UserDetails /> : <Login />}
-        />
+          element={isLoggedIn === true ? <UserDetails /> : <LandingPage />} />
         <Route path="/sign-in" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/userDetails" element={<UserDetails />} />
