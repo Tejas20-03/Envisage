@@ -1,12 +1,16 @@
 import React from "react";
 export default function AdminHome({ userData }) {
 
-//logout
+// Logout
   const logOut = () => {
     window.localStorage.clear();
     window.location.href = "./sign-in";
   };
 
+
+
+
+  
   return (
     <div className="auth-wrapper" style={{ height: "auto" }}>
       <div className="auth-inner" style={{ width: "auto" }}>
